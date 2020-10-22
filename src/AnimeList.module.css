@@ -4,7 +4,7 @@
 }
 .animeList_container {
   display: grid;
-  width: 80%;
+  width: 70%;
   margin: auto;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
@@ -12,6 +12,6 @@
 
 @media (min-width: 1280px) {
   .animeList_container {
-    grid-template-columns: repeat(4, minmax(240px, 1fr));
+    /* grid-template-columns: repeat(4, minmax(240px, 1fr)); */
   }
 }

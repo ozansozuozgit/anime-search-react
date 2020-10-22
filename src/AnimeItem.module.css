@@ -1,7 +1,6 @@
 .card {
   display: grid;
-  /* grid-template-columns: 300px; */
-  grid-template-rows: 150px 136px 64px;
+  grid-template-rows: 234px 110px 58px;
   grid-template-areas: 'image' 'text' 'stats';
 
   font-family: roboto;
@@ -17,7 +16,7 @@
   grid-area: image;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  background-size: cover;
+  background-size: 100% 100%;
 }
 
 .card_text {
@@ -66,7 +65,7 @@
   text-transform: uppercase;
 }
 
-.card_stats .rank {
+.card_stats .value {
   font-size: 22px;
   font-weight: 500;
 }
@@ -80,4 +79,3 @@
   transform: scale(1.2);
   box-shadow: 5px 5px 15px black;
 }
-
