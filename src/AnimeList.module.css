@@ -8,6 +8,7 @@
   margin: auto;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
+  margin-bottom: 3rem;
 }
 
 @media (min-width: 1280px) {

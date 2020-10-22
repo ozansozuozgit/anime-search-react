@@ -17,7 +17,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={AnimeList} />
-          <Route exact path="/anime/:anime" component={Anime} />
+          <Route exact path="/:id/:anime" component={Anime} />
         </Switch>
       </Router>
     </div>
