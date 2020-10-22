@@ -1,20 +1,29 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
+import jikanjs from 'jikanjs';
 
 export const fetchAnimeList = createAsyncThunk(
   'v3/top/anime/1/airing',
   async () => {
-    const response = await axios.get(
-      'https://api.jikan.moe/v3/top/anime/1/bypopularity'
-    );
-    return response.data.top;
+    const response = await jikanjs.loadTop('anime', 1, 'bypopularity');
+    return response.top;
   }
 );
-export const fetchAnimeTrailer = createAsyncThunk(
-  'v3/top/anime/id',
-  async (id) => {
-    const response = await axios.get(`https://api.jikan.moe/v3/anime/${id}`);
-    return response.data.trailer_url;
+// export const fetchAnimeTrailer = createAsyncThunk(
+//   'v3/top/anime/id',
+//   async (id) => {
+//     const response = await axios.get(`https://api.jikan.moe/v3/anime/${id}`);
+//     return response.data.trailer_url;
+//   }
+// );
+
+export const fetchSearchList = createAsyncThunk(
+  'v3/top/anime/search/q=',
+  async (query) => {
+    const response = await jikanjs.search('anime', query, 1, {
+      order_by: 'members',
+    });
+    console.log(response);
+    return response.results;
   }
 );
 
@@ -39,8 +48,11 @@ export const animeSlice = createSlice({
       state.status = 'failed';
       state.error = action.error.message;
     },
-    [fetchAnimeTrailer.fulfilled]: (state, action) => {
-      state.animeTrailer = action.payload;
+    // [fetchAnimeTrailer.fulfilled]: (state, action) => {
+    //   state.animeTrailer = action.payload;
+    // },
+    [fetchSearchList.fulfilled]: (state, action) => {
+      state.animeList = action.payload;
     },
   },
 });

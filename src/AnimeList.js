@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './AnimeList.module.css';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { selectAnimeList } from './features/anime/animeSlice';
 import AnimeItem from './AnimeItem';
 import Search from './Search';
