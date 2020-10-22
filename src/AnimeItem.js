@@ -11,6 +11,7 @@ function AnimeItem({ anime }) {
     end_date,
     members,
     score,
+    mal_id,
   } = anime;
 
   return (
@@ -22,21 +23,21 @@ function AnimeItem({ anime }) {
         }}
       ></div>
       <div className={styles.card_text}>
-        <span className={styles.date}>4days ago</span>
-        <h2>Post One</h2>
-        <p>some shit</p>
+        <span className={styles.date}>{`${start_date} - ${end_date}`}</span>
+        <h2>{title}</h2>
+        {/* <p>some shit</p> */}
       </div>
       <div className={styles.card_stats}>
         <div className={styles.stat}>
-          <div className={styles.value}>4m</div>
+          <div className={styles.rank}>4m</div>
           <div className={styles.type}>read</div>
         </div>
         <div className={`${styles.stat} ${styles.border}`}>
-          <div className={styles.value}>5123</div>
+          <div className={styles.rank}>5123</div>
           <div className={styles.type}>views</div>
         </div>
         <div className={styles.stat}>
-          <div className={styles.value}>5123</div>
+          <div className={styles.rank}>5123</div>
           <div className={styles.type}>read</div>
         </div>
       </div>

@@ -9,3 +9,9 @@
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1rem;
 }
+
+@media (min-width: 1280px) {
+  .animeList_container {
+    grid-template-columns: repeat(4, minmax(240px, 1fr));
+  }
+}
