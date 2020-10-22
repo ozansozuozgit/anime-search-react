@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './AnimeItem.module.css';
 import moment from 'moment';
+import { motion } from 'framer-motion';
 
 function AnimeItem({ anime }) {
   const {
@@ -24,7 +25,11 @@ function AnimeItem({ anime }) {
 
   return (
     <Link to={`/${mal_id}/${title.replace(/ /g, '_')}`}>
-      <div className={styles.card}>
+      <motion.div
+        className={styles.card}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
         <div
           className={styles.card_image}
           style={{
@@ -51,7 +56,7 @@ function AnimeItem({ anime }) {
             <div className={styles.type}>Members</div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </Link>
   );
 }

@@ -1,19 +1,23 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Anime.module.css';
-import { fetchAnime } from './features/anime/animeSlice';
-import { useDispatch,useSelector } from 'react-redux';
+import { fetchAnime, selectAnime } from './features/anime/animeSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 function Anime({ match }) {
   const dispatch = useDispatch();
+  const animeInfo = useSelector(selectAnime);
+  
   useEffect(() => {
-    console.log(match);
-    dispatch(fetchAnime(match.params.id));
-  }, [dispatch, match]);
+    if (animeInfo === null) {
+      dispatch(fetchAnime(match.params.id));
+    }
+    console.log(animeInfo);
+  }, [dispatch, match, animeInfo]);
 
   return (
     <div>
-      <h1>Body</h1>
+      <h1>{animeInfo?.title}</h1>
     </div>
   );
 }
