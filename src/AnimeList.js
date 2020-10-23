@@ -7,6 +7,7 @@ import Search from './Search';
 
 function AnimeList() {
   const animeList = useSelector(selectAnimeList);
+  
   return (
     <div className={styles.container}>
       <Search />

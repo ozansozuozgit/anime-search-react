@@ -10,6 +10,7 @@
   text-align: center;
   transition: transform 0.5s ease;
   cursor: pointer;
+  outline: none;
 }
 
 .card_image {
@@ -28,14 +29,14 @@
 }
 
 .card_text .date {
-  color: #1282a2;
+  color: #9d4edd;
   font-size: 13px;
 }
 
 .card_text h2 {
   margin: 0px;
   font-size: 20px;
-  color: #252422;
+  color: #10002b;
 }
 .card_stats {
   grid-area: stats;
@@ -44,7 +45,7 @@
   grid-template-rows: 1fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #034078;
+  background-color: #7b2cbf;
 }
 
 .card_stats .stat {
