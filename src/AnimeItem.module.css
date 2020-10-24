@@ -2,6 +2,7 @@
   display: grid;
   grid-template-rows: 234px 110px 58px;
   grid-template-areas: 'image' 'text' 'stats';
+  outline: none;
 
   font-family: roboto;
   border-radius: 18px;

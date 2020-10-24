@@ -15,6 +15,22 @@ function Anime({ match }) {
     console.log(animeInfo);
   }, [dispatch, match]);
 
+  const videoVariants = {
+    hidden: {
+      x: '100vw',
+    },
+    visible: {
+      x: 0,
+      transition: {
+        delay: 1,
+        ease: 'easeIn',
+        type: 'spring',
+        mass: 1.5,
+        stiffness: 120,
+      },
+    },
+  };
+
   return (
     <div className={styles.anime}>
       <Link to="/" className={styles.back_btn}>
@@ -30,20 +46,13 @@ function Anime({ match }) {
         {animeInfo ? <AnimeStats stats={animeInfo} /> : <h1>Loading</h1>}
       </div>
       <motion.iframe
+        variants={videoVariants}
         src={animeInfo?.trailer_url}
         frameBorder="0"
-        allow="encrypted-media"
         allowFullScreen
         title="video"
-        autoplay="0"
-        initial={{ x: '100vw' }}
-        animate={{ x: 0 }}
-        transition={{
-          delay: 1,
-          ease: 'easeIn',
-          type: 'spring',
-          stiffness: 120,
-        }}
+        initial="hidden"
+        animate="visible"
       />
     </div>
   );
