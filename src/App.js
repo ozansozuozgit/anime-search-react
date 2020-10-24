@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route,useLocation } from 'react-router-dom';
 import './App.css';
 import { useDispatch } from 'react-redux';
 import { fetchAnimeList } from './features/anime/animeSlice';
 import AnimeList from './AnimeList';
 import Anime from './Anime';
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
   const dispatch = useDispatch();
@@ -15,10 +16,12 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Switch>
-          <Route exact path="/" component={AnimeList} />
-          <Route exact path="/:id/:anime" component={Anime} />
-        </Switch>
+        <AnimatePresence>
+          <Switch>
+            <Route exact path="/" component={AnimeList} />
+            <Route exact path="/:id/:anime" component={Anime} />
+          </Switch>
+        </AnimatePresence>
       </Router>
     </div>
   );
