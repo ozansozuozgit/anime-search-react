@@ -15,26 +15,35 @@ function AnimeStats({
   },
 }) {
   let formatMembers = String(members).replace(/(.)(?=(\d{3})+$)/g, '$1,');
-  const controls = useAnimation();
-
-  useEffect(() => {
-    controls.start((i) => ({
-      opacity: 1,
-      transition: { delay: i * 0.3 },
-    }));
-  }, []);
 
   const spring = {
     type: 'spring',
-    damping: 10,
-    stiffness: 100,
+    bounce: 0.8,
+    duration: 1.6,
+    delay: 0.5,
+  };
+
+  const genreContainer = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      delay: 1,
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
+  const genreItem = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 },
   };
 
   return (
     <div className={styles.animeStats}>
       <motion.div
         className={styles.stats_container}
-        initial={{ scale: 2 }}
+        initial={{ scale: 0.5 }}
         animate={{ scale: 1 }}
         transition={spring}
       >
@@ -59,13 +68,16 @@ function AnimeStats({
           <p>Members</p>
         </div>
       </motion.div>
-      <div className={styles.genres}>
-        {genres.map((genre, index) => (
-          <motion.h3 custom={index} animate={controls} key={index}>
-            {genre.name}
-          </motion.h3>
+      <motion.div
+        className={styles.genres}
+        variants={genreContainer}
+        initial="hidden"
+        animate="show"
+      >
+        {genres.map((genre) => (
+          <motion.h3 variants={genreItem}>{genre.name}</motion.h3>
         ))}
-      </div>
+      </motion.div>
       <div className={styles.synopsis_container}>
         <h1>Synopsis</h1>
         <p>{synopsis}</p>

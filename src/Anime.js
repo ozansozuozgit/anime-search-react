@@ -17,12 +17,12 @@ function Anime({ match }) {
 
   const videoVariants = {
     hidden: {
-      x: '100vw',
+      x: '-100vw',
     },
     visible: {
       x: 0,
       transition: {
-        delay: 1,
+        delay: 1.5,
         ease: 'easeIn',
         type: 'spring',
         mass: 1.5,
@@ -34,9 +34,11 @@ function Anime({ match }) {
   const containerVariants = {
     hidden: {
       opacity: 0,
+      x: '100vw',
     },
     visible: {
       opacity: 1,
+      x: 0,
       transition: {
         duration: 1,
       },
@@ -65,7 +67,7 @@ function Anime({ match }) {
       </div>
       <motion.iframe
         variants={videoVariants}
-        src={animeInfo?.trailer_url}
+        src={animeInfo?.trailer_url.split('?')[0]}
         frameBorder="0"
         allowFullScreen
         title="video"
