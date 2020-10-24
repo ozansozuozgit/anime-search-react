@@ -27,6 +27,7 @@ h1 {
 
 .stat p {
   margin: 0;
+  color: #e0aaff;
 }
 
 .stats_container {
@@ -37,4 +38,13 @@ h1 {
   color: #e0aaff;
   width: 80%;
   justify-content: space-around;
+}
+
+.genres > h3 {
+  border-bottom: 1px solid #5a189a;
+  opacity: 0;
+}
+
+.synopsis_container > p {
+  line-height: 22px;
 }

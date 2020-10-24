@@ -17,8 +17,14 @@
   padding: 20px;
 }
 
-.left_container h1 {
+.left_container > h1 {
   color: #e0aaff;
+  font-size: 1.5em;
+  text-align: center;
+}
+.left_container > img {
+  border: 1px solid #e0aaff;
+  border-radius: 15px;
 }
 
 iframe {
@@ -27,4 +33,10 @@ iframe {
   height: 80%;
   margin: auto;
   margin-bottom: 20px;
+}
+
+.back_btn {
+  padding: 20px;
+  color: #e0aaff;
+  display: table;
 }
