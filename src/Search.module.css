@@ -32,3 +32,9 @@
   color: #240046;
   cursor: pointer;
 }
+@media (max-width: 800px) {
+  .search > input[type='button'] {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+}

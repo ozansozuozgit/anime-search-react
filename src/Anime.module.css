@@ -1,8 +1,6 @@
 .anime {
   color: white;
   height: 100vh;
-  /* display: flex;
-  flex-direction: column; */
 }
 .info_container {
   display: flex;
