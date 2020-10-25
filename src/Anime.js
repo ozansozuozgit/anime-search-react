@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Anime.module.css';
 import { fetchAnime, selectAnime } from './features/anime/animeSlice';
@@ -12,7 +12,7 @@ function Anime({ match }) {
 
   useEffect(() => {
     dispatch(fetchAnime(match.params.id));
-    console.log(animeInfo);
+
   }, [dispatch, match]);
 
   const videoVariants = {

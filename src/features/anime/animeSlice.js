@@ -49,7 +49,6 @@ export const animeSlice = createSlice({
   },
 });
 
-export const {} = animeSlice.actions;
 
 export const selectAnimeList = (state) => state.anime.animeList;
 export const selectAnime = (state) => state.anime.anime;

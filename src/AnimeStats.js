@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styles from './AnimeStats.module.css';
-import { motion, useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 function AnimeStats({
   stats: {

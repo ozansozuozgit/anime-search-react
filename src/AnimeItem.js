@@ -6,7 +6,6 @@ import { motion } from 'framer-motion';
 
 function AnimeItem({ anime }) {
   const {
-    rank,
     title,
     image_url,
     episodes,

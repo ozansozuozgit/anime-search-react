@@ -1,10 +1,5 @@
 import React, { useEffect } from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useLocation,
-} from 'react-router-dom';
+import { Switch, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import { useDispatch } from 'react-redux';
 import { fetchAnimeList } from './features/anime/animeSlice';
@@ -17,7 +12,6 @@ function App() {
   const location = useLocation();
   useEffect(() => {
     dispatch(fetchAnimeList());
-    console.log(location);
   }, [dispatch]);
 
   return (
