@@ -23,7 +23,6 @@
 
 .card_text {
   grid-area: text;
-  /* margin: 25px; */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -75,6 +74,5 @@
 }
 
 .card:hover {
-  /* transform: scale(1.2); */
   box-shadow: 5px 5px 15px black;
 }

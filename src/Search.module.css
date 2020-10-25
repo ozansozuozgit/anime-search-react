@@ -5,7 +5,7 @@
   text-align: center;
 }
 
-.search > input {
+.search > input[type='text'] {
   outline: none;
   border-radius: 10px;
   padding: 10px;
@@ -15,4 +15,20 @@
   border: none;
   font-size: 24px;
   color: #10002b;
+}
+.search > input[type='button'] {
+  margin-left: 10px;
+  font-size: 25px;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  color: #c77dff;
+  background-color: #240046;
+  border: 1px solid #c77dff;
+}
+
+.search > input[type='button']:hover {
+  background-color: #c77dff;
+  color: #240046;
+  cursor: pointer;
 }

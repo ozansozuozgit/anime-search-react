@@ -20,6 +20,7 @@ function App() {
         <Switch location={location} key={location.key}>
           <Route exact path="/" component={AnimeList} />
           <Route exact path="/:id/:anime" component={Anime} />
+          <Route path="*" component={AnimeList} />
         </Switch>
       </AnimatePresence>
     </div>

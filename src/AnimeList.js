@@ -10,9 +10,9 @@ function AnimeList() {
   const animeList = useSelector(selectAnimeList);
 
   const containerVariants = {
-    hidden: {
+    entry: {
       opacity: 0,
-      x: '-100vw',
+      x: '100vw',
     },
     visible: {
       opacity: 1,
@@ -21,14 +21,18 @@ function AnimeList() {
         duration: 1,
       },
     },
+    exit: {
+      opacity: 0,
+      x: '-100vw',
+    },
   };
 
   return (
     <motion.div
       variants={containerVariants}
-      initial="hidden"
+      initial="entry"
       animate="visible"
-      exit="hidden"
+      exit="exit"
       className={styles.container}
     >
       <Search />

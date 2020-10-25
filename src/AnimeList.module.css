@@ -14,9 +14,3 @@
 .animeList_container > a {
   text-decoration: none;
 }
-
-@media (min-width: 1280px) {
-  .animeList_container {
-    /* grid-template-columns: repeat(4, minmax(240px, 1fr)); */
-  }
-}

@@ -12,7 +12,6 @@ function Anime({ match }) {
 
   useEffect(() => {
     dispatch(fetchAnime(match.params.id));
-
   }, [dispatch, match]);
 
   const videoVariants = {
@@ -67,7 +66,11 @@ function Anime({ match }) {
       </div>
       <motion.iframe
         variants={videoVariants}
-        src={animeInfo?.trailer_url.split('?')[0]}
+        src={
+          animeInfo && animeInfo?.trailer_url !== null
+            ? animeInfo?.trailer_url.split('?')[0]
+            : ''
+        }
         frameBorder="0"
         allowFullScreen
         title="video"

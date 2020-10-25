@@ -12,11 +12,12 @@ function Search() {
   };
 
   const submitInput = (e) => {
-    if (e.key === 'Enter') {
+    console.log(e);
+    console.log(e.type);
+    if (input !== '' && (e.key === 'Enter' || e.type === 'click')) {
       dispatch(fetchSearchList(input));
     }
   };
-
 
   return (
     <div className={styles.search}>
@@ -27,6 +28,7 @@ function Search() {
         onKeyPress={submitInput}
         placeholder="Search for anime"
       />
+      <input type="button" value="Search" onClick={submitInput} />
     </div>
   );
 }

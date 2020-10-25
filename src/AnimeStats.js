@@ -3,16 +3,7 @@ import styles from './AnimeStats.module.css';
 import { motion } from 'framer-motion';
 
 function AnimeStats({
-  stats: {
-    rank,
-    genres,
-    members,
-    popularity,
-    score,
-    aired,
-    synopsis,
-    episodes,
-  },
+  stats: { rank, genres, members, popularity, score, synopsis, episodes },
 }) {
   let formatMembers = String(members).replace(/(.)(?=(\d{3})+$)/g, '$1,');
 
@@ -74,8 +65,10 @@ function AnimeStats({
         initial="hidden"
         animate="show"
       >
-        {genres.map((genre) => (
-          <motion.h3 variants={genreItem}>{genre.name}</motion.h3>
+        {genres.map((genre, index) => (
+          <motion.h3 key={index} variants={genreItem}>
+            {genre.name}
+          </motion.h3>
         ))}
       </motion.div>
       <div className={styles.synopsis_container}>
