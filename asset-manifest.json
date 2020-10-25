@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/anime-search-react/static/css/main.1bbd674f.chunk.css",
+    "main.js": "/anime-search-react/static/js/main.aeda9b21.chunk.js",
+    "main.js.map": "/anime-search-react/static/js/main.aeda9b21.chunk.js.map",
+    "runtime-main.js": "/anime-search-react/static/js/runtime-main.cde99b66.js",
+    "runtime-main.js.map": "/anime-search-react/static/js/runtime-main.cde99b66.js.map",
+    "static/js/2.2d25cf87.chunk.js": "/anime-search-react/static/js/2.2d25cf87.chunk.js",
+    "static/js/2.2d25cf87.chunk.js.map": "/anime-search-react/static/js/2.2d25cf87.chunk.js.map",
+    "index.html": "/anime-search-react/index.html",
+    "precache-manifest.60cee433920fcc10e90c25ba4f680270.js": "/anime-search-react/precache-manifest.60cee433920fcc10e90c25ba4f680270.js",
+    "service-worker.js": "/anime-search-react/service-worker.js",
+    "static/css/main.1bbd674f.chunk.css.map": "/anime-search-react/static/css/main.1bbd674f.chunk.css.map",
+    "static/js/2.2d25cf87.chunk.js.LICENSE.txt": "/anime-search-react/static/js/2.2d25cf87.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cde99b66.js",
+    "static/js/2.2d25cf87.chunk.js",
+    "static/css/main.1bbd674f.chunk.css",
+    "static/js/main.aeda9b21.chunk.js"
+  ]
+}
