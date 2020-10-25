@@ -80,7 +80,7 @@ function AnimeStats({
       </motion.div>
       <div className={styles.synopsis_container}>
         <h1>Synopsis</h1>
-        <p>{synopsis}</p>
+        <p>{synopsis.split('[Written')[0]}</p>
       </div>
     </div>
   );

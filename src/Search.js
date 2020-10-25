@@ -13,7 +13,6 @@ function Search() {
 
   const submitInput = (e) => {
     if (e.key === 'Enter') {
-      console.log(input);
       dispatch(fetchSearchList(input));
     }
   };

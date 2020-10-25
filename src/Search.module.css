@@ -1,3 +1,18 @@
 .search {
   color: white;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.search > input {
+  outline: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px 0;
+  width: 70%;
+  background-color: #e0aaff;
+  border: none;
+  font-size: 24px;
+  color: #10002b;
 }

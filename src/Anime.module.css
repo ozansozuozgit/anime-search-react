@@ -25,6 +25,8 @@
 .left_container > img {
   border: 1px solid #e0aaff;
   border-radius: 15px;
+  width: 100%;
+  max-width: 250px;
 }
 
 iframe {
@@ -39,4 +41,16 @@ iframe {
   padding: 20px;
   color: #e0aaff;
   display: table;
+}
+
+@media (max-width: 800px) {
+  .info_container {
+    flex-direction: column;
+  }
+  iframe {
+    width: 88%;
+    height: 50%;
+    display: block;
+    flex: none;
+  }
 }
