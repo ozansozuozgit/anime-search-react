@@ -12,10 +12,9 @@ function Search() {
   };
 
   const submitInput = (e) => {
-    console.log(e);
-    console.log(e.type);
     if (input !== '' && (e.key === 'Enter' || e.type === 'click')) {
       dispatch(fetchSearchList(input));
+      setInput('');
     }
   };
 
