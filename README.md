@@ -10,7 +10,7 @@ Website is hosted on [gh-pages](https://ozansozuozgit.github.io/anime-search-rea
 
 <p align="center">
 <img width="500" height="400" src="src/readme-assets/desktop-gif.gif">
-  <img width="200" height="400" src="src/readme-assets/moboile-gif.gif">
+  <img width="200" height="400" src="src/readme-assets/mobile-gif.gif">
 
 </p>
 <p align="center">
