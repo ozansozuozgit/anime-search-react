@@ -1,6 +1,6 @@
 # Anime Search App Created With React and Redux
 
-Anime search tool to find more information about your favorite anime.
+Anime search tool to find more information about your favorite anime. Includes animation and responsive design.
 
 ---
 
@@ -13,11 +13,7 @@ Website is hosted on [gh-pages](https://ozansozuozgit.github.io/anime-search-rea
   <img width="200" height="400" src="src/readme-assets/mobile-gif.gif">
 
 </p>
-<p align="center">
-<img width="500" height="400" src="src/readme-assets/desktop-pic.png">
-  <img width="200" height="400" src="src/readme-assets/mobile-pic.png">
 
-</p>
 
 ## Tools used
 
